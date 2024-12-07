@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="sP.css" />
+  </head>
+  <body>
+    <form action="POST" class="form-signin">
+      <h1>Newsletter Subscription</h1>
+      <div class="input-text">
+        <div class="form-input">
+          <label for="Name">Full Name</label>
+          <input
+            class="textbox"
+            type="text"
+            placeholder="Enter your name"
+            id="Name"
+            required
+            autofocus
+          />
+        </div>
+        <div class="form-input">
+          <label for="Username">Username</label>
+          <input
+            class="textbox"
+            type="text"
+            placeholder="Enter your username"
+            id="Username"
+          />
+        </div>
+        <div class="form-input">
+          <label for="email">Email</label>
+          <input
+            class="textbox"
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div class="form-input">
+          <label for="phone">Phone Number</label>
+          <input
+            class="textbox"
+            type="number"
+            id="phone"
+            placeholder="Enter your number"
+          />
+        </div>
+        <div class="form-input">
+          <label for="pwd">Password</label>
+          <input
+            class="textbox"
+            type="password"
+            id="pwd"
+            placeholder="Enter your password"
+            required
+            minlength="6"
+          />
+        </div>
+        <div class="form-input">
+          <label for="confirm">Confirm Password</label>
+          <input
+            class="textbox"
+            type="password"
+            id="confirm"
+            placeholder="Confirm your password"
+          />
+        </div>
+      </div>
+      <div class="gender-btn">
+        <h2>Gender</h2>
+        <div class="radio-btn">
+          <input type="radio" name="gender" id="male" />
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="female" />
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="vatt" />
+          <label for="vatt">Prefer not to say</label>
+        </div>
+      </div>
+      <button class="btn" type="submit">Register</button>
+    </form>
+  </body>
+</html>
