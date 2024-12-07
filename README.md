@@ -1,6 +1,6 @@
 # Projects Repository
 
-A collection of small projects for practice and experimentation.
+A collection of small projects built with HTML and CSS for practice and experimentation.
 
 ## Projects
 
