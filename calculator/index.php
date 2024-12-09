@@ -9,7 +9,7 @@
 <body>
   <div class="calculator">
     <h1>Calculator</h1>
-    <form action="./calc.php" method="POST">
+    <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST">
       <input type="number" name="num1" placeholder="Enter first number" required>
       <select name="operation">
         <option value="+">+</option>
@@ -21,7 +21,38 @@
       <button type="submit">Calculate</button>
     </form>
     <div class="result">
-      
+      <?php
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $num1 = $_POST['num1'];
+            $num2 = $_POST['num2'];
+            $operation = $_POST['operation'];
+            $result = "";
+
+            switch ($operation) {
+                case '+':
+                    $result = $num1 + $num2;
+                    break;
+                case '-':
+                    $result = $num1 - $num2;
+                    break;
+                case '*':
+                    $result = $num1 * $num2;
+                    break;
+                case '/':
+                    if ($num2 != 0) {
+                        $result = $num1 / $num2;
+                    } else {
+                        $result = "Error: Division by zero";
+                    }
+                    break;
+                default:
+                    $result = "Invalid operation";
+                    break;
+            }
+            $result=htmlspecialchars($result);
+            echo "<h2>Result<br> $num1 $operation $num2 = $result</h2> ";        
+          }
+      ?>
     </div>
   </div>
 </body>
